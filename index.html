@@ -11,12 +11,12 @@
 </head>
 <body>
     <div id='vue-app'>
-        <h1>Vue tutorial</h1>
         <h1>{{ title }}</h1>
-        <p>{{ greet('evening') }}</p>
-        <a :href="url">YouTube</a>
-        <div :class="classes">Class from instance</div>
-        <input type="text" :value="title">
+        <p>I earn {{ wage }} pounds per hour</p>
+        <button v-on:click="changeWage(1)">Increase wage by 1 pound</button>
+        <button v-on:click="changeWage(-1)">Decrease wage by 1 pound</button>
+        <button v-on:dblclick="changeWage(5)">Increase wage by 5 pound</button>
+        <button v-on:dblclick="changeWage(-5)">Decrease wage by 5 pound</button>
     </div>
 
     <script src="app.js"></script>
