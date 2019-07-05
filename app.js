@@ -3,6 +3,8 @@ new Vue({
     data: {
         title: 'Vue tutor',
         name: 'Andrii',
+        url: 'https://www.youtube.com/',
+        classes: ['one', 'two'],
     },
     methods: {
         greet(time) {
