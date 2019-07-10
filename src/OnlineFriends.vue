@@ -2,7 +2,7 @@
     <div id="online-friends">
         <h2>Online Friends</h2>
         <div v-for="(friend, index) in friends" :key="index">
-            <span v-if="friend.online" @click="printMe">{{ friend.name }}</span>
+            <span v-if="friend.online" @click="unfriend(friend.name)">{{ friend.name }}</span>
         </div>
     </div>
 </template>
@@ -16,10 +16,10 @@ export default {
         }
     },
     methods: {
-        printMe() {
-            console.log(this);
+        unfriend(name) {
+            this.$emit('delete', { name });
         }
-    }
+    },
 }
 </script>
 
