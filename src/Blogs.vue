@@ -1,6 +1,7 @@
 <template>
     <div class="blogs">
-        <h2></h2>
+        <h2>{{ blogTitle }}</h2>
+        <button @click="changeTitle">Change title</button>
     </div>
 </template>
 
@@ -12,12 +13,20 @@ export default {
             blogTitle: 'Blogs',
         }
     },
+    methods: {
+        changeTitle() {
+            this.blogTitle += 'a';
+        },
+    },
     beforeCreate() {
-        console.log('Before create hook');
+        alert('Before create hook');
     },
     created() {
-        console.log('Created hook');
+        alert('Created hook');
     },
+    beforeUpdate() {
+        alert('Before update');
+    }
 }
 </script>
 
